@@ -1,0 +1,276 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color:#333;
+    overflow-x: hidden;
+}
+
+/* Header */
+/* Centering the header text */
+/* Styling Header and Logo */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.site-header .logo {
+    font-size: 3em;
+    color: #007bff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #dbdee2, 0 0 5px #007bff, 0 0 20px #007bff;
+}
+
+
+
+.logo {
+    font-size: 3em;
+    display: flex;
+    gap: 5px;
+}
+
+/* Styling for Each Letter */
+.letter {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 3.5s forwards infinite; /* Animasi berulang tanpa henti */
+}
+
+/* Animation for Each Letter */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Delay for Each Letter */
+.letter:nth-child(1) { animation-delay: 0s; }
+.letter:nth-child(2) { animation-delay: 0.3s; }
+.letter:nth-child(3) { animation-delay: 0.6s; }
+.letter:nth-child(4) { animation-delay: 0.9s; }
+.letter:nth-child(5) { animation-delay: 1.2s; }
+
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Agar search bar berada di sisi kanan navbar */
+}
+
+/* Search Input */
+.search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Search Button */
+.search-button {
+    padding: 5px 10px;
+    background-color: #0056b3;
+    color: white;
+    border: 1px solid #0056b3;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling Navbar untuk Menampung Search Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 10px 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    min-height: 70vh;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-picture img {
+    width: 280px;
+    height: 300px;
+    border-radius: 3%;
+    border: 41x solid #007bff;
+    
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list li {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Container untuk tombol panah dan slide */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Styling tombol panah */
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling container slide */
+.slides-container {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Mengatur tampilan setiap slide */
+.slide {
+    display: none;
+}
+
+.slide h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Gaya untuk gambar di setiap slide */
+.slide-image {
+    width: 200px;
+    height: auto;
+    border-radius: 5%;
+    margin-bottom: 15px;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+}
+
+.social-links {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff; /* Warna ikon jika menggunakan Font Awesome */
+    font-size: 24px; /* Ukuran ikon jika menggunakan Font Awesome */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Warna ikon saat hover */
+}
+
+.social-icon img {
+    width: 24px; /* Ukuran gambar ikon jika menggunakan gambar PNG */
+    height: 24px;
+}

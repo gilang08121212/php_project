@@ -1,0 +1,191 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #333;
+}
+
+.site-header .logo {
+    font-size: 1.5em;
+    color: white;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Agar search bar berada di sisi kanan navbar */
+}
+
+/* Search Input */
+.search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Search Button */
+.search-button {
+    padding: 5px 10px;
+    background-color: #0056b3;
+    color: white;
+    border: 1px solid #0056b3;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling Navbar untuk Menampung Search Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 10px 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 72vh;
+    background: url('bg_3.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding-top: 80px; /* Menambahkan jarak agar tidak tertutup navbar */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* Mengatur gambar profil di samping teks h2 */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Jarak antara gambar dan teks */
+    text-align: left;
+}
+
+.profile-image {
+        height: 320px;
+        width: 300px;
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.profile-section {
+    text-align: center;
+    height: 320px; /* Tinggi elemen .profile-section */
+    width: 365px; /* Lebar elemen .profile-section */
+    background-image: url(paint.png); /* Menambahkan gambar background */
+    background-size: 115% 150%; /* Mengatur ukuran background agar memenuhi elemen */
+    background-repeat: no-repeat; /* Mencegah background berulang */
+    margin-bottom: 150px;
+}
+
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color:#444;
+}
+
+.hero p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color:#444;
+}
+
+
+
+.text-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+.text-section {
+    margin-top: -150px; /* Menggeser teks ke atas tanpa mengubah posisi gambar */
+}
+
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff; /* Warna ikon jika menggunakan Font Awesome */
+    font-size: 24px; /* Ukuran ikon jika menggunakan Font Awesome */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Warna ikon saat hover */
+}
+
+.social-icon img {
+    width: 24px; /* Ukuran gambar ikon jika menggunakan gambar PNG */
+    height: 24px;
+}
